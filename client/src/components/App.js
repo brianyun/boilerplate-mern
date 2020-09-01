@@ -1,0 +1,23 @@
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import LandingPage from "./views/LandingPage/LandingPage";
+import LoginPage from "./views/LoginPage/LoginPage";
+import RegisterPage from "./views/RegisterPage/RegisterPage";
+
+const App = () => {
+	return (
+		<Router>
+			<div>
+				{/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+				<Switch>
+					<Route exact path="/" component={LandingPage} />
+					<Route exact path="/register" component={RegisterPage} />
+					<Route exact path="/login" component={LoginPage} />
+				</Switch>
+			</div>
+		</Router>
+	);
+};
+
+export default App;
