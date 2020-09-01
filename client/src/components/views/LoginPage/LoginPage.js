@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { loginUser } from "../../../_actions/user_action";
 
 const LoginPage = (props) => {
@@ -54,10 +55,10 @@ const LoginPage = (props) => {
 					onChange={onPasswordHandler}
 				/>
 				<br />
-				<button>Login</button>
+				<button type="submit">Login</button>
 			</form>
 		</div>
 	);
 };
 
-export default LoginPage;
+export default withRouter(LoginPage);
